@@ -8,9 +8,9 @@ int main(void)
 {
 	int i, j;
 
-	for (i = 0; i <= 99; i++)
+	for (i = 0; i < 100; i++)
 	{
-		for (j = i; j <= 99; j++)
+		for (j = i; j < 100; j++)
 		{
 			int tens1 = i / 10;
 			int ones1 = i % 10;
@@ -24,7 +24,7 @@ int main(void)
 			putchar('0' + tens2);
 			putchar('0' + ones2);
 
-			if (i != 99 || j != 99)
+			if (i != 98 || j != 99)
 			{
 				putchar(',');
 				putchar(' ');
