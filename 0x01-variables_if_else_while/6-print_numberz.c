@@ -1,5 +1,6 @@
 #include <stdlib.h>
 #include <time.h>
+#include <stdio.h>
 /**
  * main - Prints single-digit numbers in base 10
  *
@@ -9,7 +10,7 @@ int main(void)
 {
 	int i;
 
-	for (i = 48; i < 58; i++)
+	for (i = 0; i < 10; i++)
 	{
 		putchar(i)
 	}
