@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 /**
  * main - list all the natural numbers below 1024 (excluded)
  * Return: 0
