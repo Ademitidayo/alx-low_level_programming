@@ -1,6 +1,7 @@
 #include "main.h"
 #include <time.h>
-
+#include <stdio.h>
+#include <stdlib.h>
 /**
  * main - program that generates random valid passwords for the program
  *
@@ -8,8 +9,8 @@
  */
 int main(void)
 {
-	int pass[100]
-	int i, sim, n;
+	int pass[100];
+	int i, sum, n;
 
 	sum = 0;
 
