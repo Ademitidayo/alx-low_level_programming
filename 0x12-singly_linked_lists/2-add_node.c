@@ -4,27 +4,27 @@
 
 /**
  * add_node - adds a new node at the beginning of a linked list
- * @head: double pointer to the list_t list
- * @str: new string to add in the node
+ * @point: double pointer to the list_t list
+ * @x: new string to add in the node
  *
  * Return: the address of the new element, or NULL if it fails
  */
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *two;
-	unsigned int day = 0;
+	list_t *new;
+	unsigned int len = 0;
 
-	while (str[day])
-		day++;
+	while (x[len])
+		len++;
 
-	two = malloc(sizeof(list_t));
-	if (!two)
+	new = malloc(sizeof(list_t));
+	if (!new)
 		return (NULL);
 
-	two->str = strdup(str);
-	two->day = day;
-	two->next = (*head);
-	(*head) = two;
+	new->x = strdup(x);
+	new->len = len;
+	new->next = (*point);
+	(*point) = new;
 
-	return (*head);
+	return (*point);
 }
