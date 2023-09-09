@@ -11,18 +11,18 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buf;
-	ssize_t fd;
-	ssize_t w;
-	ssize_t t;
+	ssize_t ade;
+	ssize_t aded;
+	ssize_t adeda;
 
-	fd = open(filename, O_RDONLY);
-	if (fd == -1)
+	ade = open(filename, O_RDONLY);
+	if (ade == -1)
 		return (0);
 	buf = malloc(sizeof(char) * letters);
-	t = read(fd, buf, letters);
-	w = write(STDOUT_FILENO, buf, t);
+	aded = read(ade, buf, letters);
+	adeda = write(STDOUT_FILENO, buf, aded);
 
 	free(buf);
-	close(fd);
-	return (w);
+	close(ade);
+	return (adeda);
 }
