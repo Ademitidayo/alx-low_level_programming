@@ -1,45 +1,45 @@
-#include "lists.h"
+#include"lists.h"
 
 /**
- * delete_dnodeint_at_index - Deletes the node at a given position in a dlistint_t list.
- * @head: A pointer to a pointer to the head of the doubly linked list.
- * @index: The index of the node to be deleted, starting from 0.
- * Return: 1 if it succeeded, -1 if it failed.
+ *delete_dnodeint_at_index-Deletesthenodeatagivenpositioninadlistint_tlist.
+ *@head:Apointertoapointertotheheadofthedoublylinkedlist.
+ *@index:Theindexofthenodetobedeleted,startingfrom0.
+ *Return:1ifitsucceeded,-1ifitfailed.
  */
-int delete_dnodeint_at_index(dlistint_t **head, unsigned int index) 
+intdelete_dnodeint_at_index(dlistint_t**head,unsignedintindex)
 {
-    dlistint_t *current, *temp;
-    unsigned int i;
+    dlistint_t*current,*temp;
+    unsignedinti;
 
-    if (head == NULL || *head == NULL)
-        return -1;
+    if(head==NULL||*head==NULL)
+        return-1;
 
-    current = *head;
+    current=*head;
 
-    if (index == 0) 
+    if(index==0)
     {
-        *head = (*head)->next;
-        if (*head != NULL)
-            (*head)->prev = NULL;
+        *head=(*head)->next;
+        if(*head!=NULL)
+            (*head)->prev=NULL;
         free(current);
-        return 1;
+        return1;
     }
 
-    for (i = 0; i < index && current != NULL; i++) 
+    for(i=0;i<index&&current!=NULL;i++)
     {
-        current = current->next;
+        current=current->next;
     }
 
-    if (current == NULL)
-        return -1; // Index out of bounds, cannot delete.
+    if(current==NULL)
+        return-1;
 
-    temp = current->prev;
-    temp->next = current->next;
+    temp=current->prev;
+    temp->next=current->next;
 
-    if (current->next != NULL)
-        current->next->prev = temp;
+    if(current->next!=NULL)
+        current->next->prev=temp;
 
     free(current);
 
-    return 1;
+    return1;
 }
