@@ -1,17 +1,17 @@
 #include"lists.h"
 /**
- *dlistint_len-Returnsthenumberofelementsinalinkeddlistint_tlist.
- *@h:Apointertotheheadofthedoublylinkedlist.
- *Return:Thenumberofelementsinthelist.
+ * dlistint_len - Returnsthenumberofelementsinalinkeddlistint_tlist.
+ * @h: Apointertotheheadofthedoublylinkedlist.
+ * Return: Thenumberofelementsinthelist.
  */
-size_tdlistint_len(constdlistint_t*h)
+size_t dlistint_len(const dlistint_t *h)
 {
-    constdlistint_t*current=h;
-    size_tcount=0;
-    while(current!=NULL)
+    const dlistint_t *current = h;
+    size_t count = 0;
+    while (current != NULL)
     {
         count++;
-        current=current->next;
+        current =current -> next;
     }
-    returncount;
+    return count;
 }

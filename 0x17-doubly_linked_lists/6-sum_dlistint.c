@@ -1,20 +1,20 @@
 #include"lists.h"
 
 /**
- *sum_dlistint-Returnsthesumofallthedata(n)inadlistint_tlinkedlist.
- *@head:Apointertotheheadofthedoublylinkedlist.
- *Return:Thesumofallthedatavalues,or0ifthelistisempty.
+ * sum_dlistint - Returnsthesumofallthedata(n)inadlistint_tlinkedlist.
+ * @head: Apointertotheheadofthedoublylinkedlist.
+ * Return: Thesumofallthedatavalues,or0ifthelistisempty.
  */
-intsum_dlistint(dlistint_t*head)
+int sum_dlistint(dlistint_t *head)
 {
-    intsum=0;
-    dlistint_t*current=head;
+    int sum = 0;
+    dlistint_t *current = head;
 
-    while(current!=NULL)
+    while (current != NULL)
     {
-        sum+=current->n;
-        current=current->next;
+        sum += current -> n;
+        current = current -> next;
     }
 
-    returnsum;
+    return sum;
 }

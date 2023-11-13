@@ -1,45 +1,45 @@
 #include"lists.h"
 
 /**
- *delete_dnodeint_at_index-Deletesthenodeatagivenpositioninadlistint_tlist.
- *@head:Apointertoapointertotheheadofthedoublylinkedlist.
- *@index:Theindexofthenodetobedeleted,startingfrom0.
- *Return:1ifitsucceeded,-1ifitfailed.
+ * delete_dnodeint_at_index - Deletesthenodeatagivenpositioninadlistint_tlist.
+ * @head: Apointertoapointertotheheadofthedoublylinkedlist.
+ * @index: Theindexofthenodetobedeleted,startingfrom0.
+ * Return: 1 if itsucceeded,-1ifitfailed.
  */
-intdelete_dnodeint_at_index(dlistint_t**head,unsignedintindex)
+int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 {
-    dlistint_t*current,*temp;
-    unsignedinti;
+    dlistint_t *current, *temp;
+    unsigned int i;
 
-    if(head==NULL||*head==NULL)
-        return-1;
+    if (head == NULL || *head == NULL)
+        return (-1);
 
-    current=*head;
+    current = *head;
 
-    if(index==0)
+    if (index == 0)
     {
-        *head=(*head)->next;
-        if(*head!=NULL)
-            (*head)->prev=NULL;
-        free(current);
-        return1;
+        *head = (*head) -> next;
+        if (*head != NULL)
+            (*head) -> prev = NULL;
+        free (current);
+        return (1);
     }
 
-    for(i=0;i<index&&current!=NULL;i++)
+    for(i = 0; i < index &&current != NULL; i++)
     {
-        current=current->next;
+        current = current -> next;
     }
 
-    if(current==NULL)
-        return-1;
+    if(current == NULL)
+        return (-1);
 
-    temp=current->prev;
-    temp->next=current->next;
+    temp = current -> prev;
+    temp -> next = current -> next;
 
-    if(current->next!=NULL)
-        current->next->prev=temp;
+    if (current -> next != NULL)
+        current-> next -> prev = temp;
 
-    free(current);
+    free (current);
 
-    return1;
+    return (1);
 }
